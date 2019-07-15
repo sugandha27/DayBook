@@ -394,13 +394,14 @@ public class RegisterForm extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Please confirm password ");
             
         
-                        
+                       
         
         try
         {
-        Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.jdbc.Driver");
 		String str="jdbc:mysql://localhost:3308/Daybook";
-		Connection x=DriverManager.getConnection(str, "Daybook", "Daybook");
+		Connection x=DriverManager.getConnection(str, "Daybook", "Daybook"); 
+        
                 
                 String q="insert into users VALUES (?,?,?,?,?,?,?,?,?)";
                 PreparedStatement y=x.prepareStatement(q);
@@ -424,16 +425,7 @@ public class RegisterForm extends javax.swing.JFrame {
                 
                 
                  JOptionPane.showMessageDialog(this,st);
-             txtName.setText("");
-             txtUname.setText("");
-            pass.setText("");
-            rePass.setText("");
-             txtPhone.setText("");
-             txtAnswer.setText("");
-             rBtnIndividual.isSelected();
-             comboQues.setSelectedIndex(0);
-             txtEmail.setText("");
-             txtCompany.setText("");
+            
             String subject="Registration Successful";
         String message="Welcome to DayBook "+name+" Hope you have wonderful experience while accounting with us. For any further queries you can reply to this mail.";
         sendMail.sendEmail(email, subject, message);
@@ -446,6 +438,62 @@ public class RegisterForm extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this,ex.getMessage());
             
         }
+         txtName.setText("");
+             txtUname.setText("");
+            pass.setText("");
+            rePass.setText("");
+             txtPhone.setText("");
+             txtAnswer.setText("");
+             rBtnIndividual.isSelected();
+             comboQues.setSelectedIndex(0);
+             txtEmail.setText("");
+             txtCompany.setText("");
+             try{
+             Class.forName("com.mysql.jdbc.Driver");
+		String str="jdbc:mysql://localhost:3308/Daybook";
+		Connection x=DriverManager.getConnection(str, "Daybook", "Daybook"); 
+             String q="INSERT INTO `accountHead`(`l_name`, `l_details`, `type`, `username`) VALUES (?,?,?,?)";
+             PreparedStatement y1=x.prepareStatement(q);
+             y1.setString(1,"Electricity");
+              y1.setString(2,"montlhy electricity bill");
+              y1.setString(3,uname);
+              y1.setString(4,"Expense");
+             
+               int n=y1.executeUpdate();
+               y1.close();
+              String q1="INSERT INTO `accountHead`(`l_name`, `l_details`, `type`, `username`) VALUES (?,?,?,?)";
+             PreparedStatement y2=x.prepareStatement(q1);
+             y2.setString(1,"EMI");
+              y2.setString(2,"montlhy emi");
+              y2.setString(3,uname);
+              y2.setString(4,"Expense");
+             
+               y2.executeUpdate();
+               y2.close();
+                String q2="INSERT INTO `accountHead`(`l_name`, `l_details`, `type`, `username`) VALUES (?,?,?,?)";
+             PreparedStatement y3=x.prepareStatement(q2);
+             y3.setString(1,"Salary");
+              y3.setString(2,"montlhy salary ");
+              y3.setString(3,uname);
+              y3.setString(4,"Income");
+             
+               y3.executeUpdate();
+               y3.close();
+                  String q3="INSERT INTO `accountHead`(`l_name`, `l_details`, `type`, `username`) VALUES (?,?,?,?)";
+             PreparedStatement y4=x.prepareStatement(q3);
+             y4.setString(1,"Fees");
+              y4.setString(2,"montlhy fees ");
+              y4.setString(3,uname);
+              y4.setString(4,"Expense");
+             
+               y4.executeUpdate();
+               y4.close();
+            
+             }
+             catch(Exception ex)
+             {
+                 JOptionPane.showMessageDialog(this,ex.getMessage());
+             }
         
         
         

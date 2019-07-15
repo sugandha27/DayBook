@@ -98,7 +98,7 @@ public class Salary extends javax.swing.JInternalFrame {
         setBackground(new java.awt.Color(1, 50, 67));
         setClosable(true);
         setIconifiable(true);
-        setMaximizable(true);
+        setResizable(true);
 
         jPanel1.setBackground(new java.awt.Color(240, 52, 52));
 

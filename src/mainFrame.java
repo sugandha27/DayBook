@@ -424,6 +424,9 @@ desktopPaneBG1.add(va);
                  
                String v3="select * from accountHead where l_name=? and username=? and type=?";
                PreparedStatement y3=x.prepareStatement(v3);
+               y3.setString(1,name);
+               y3.setString(2, username);
+               y3.setString(3,"Expense");
                ResultSet ry=y3.executeQuery();
                String a1;
                while(ry.next())
@@ -453,6 +456,10 @@ desktopPaneBG1.add(va);
                  
                String v4="select * from accountHead where l_name=? and username=? and type=?";
                PreparedStatement y4=x.prepareStatement(v4);
+                  y4.setString(1,lname);
+               y4.setString(2, username);
+               y4.setString(3,"Expense");
+               
                ResultSet ry1=y4.executeQuery();
                String a2;
                while(ry1.next())
@@ -515,7 +522,7 @@ desktopPaneBG1.add(va);
                    a = Double.valueOf(rs1.getString("amount"));
                    sum+=a;
                
-               if(sum>=5000)
+               if(sum>=65000)
                {
                
                     if(Integer.parseInt(cmonth)==(Integer.parseInt(month)+01))
