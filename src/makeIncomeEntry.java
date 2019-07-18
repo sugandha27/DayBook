@@ -405,7 +405,7 @@ try{
             txtdetails.setText(a2);
             java.util.Date date2=new SimpleDateFormat("dd-mm-yyyy").parse(a3);
             dateChoose.setDate(date2);
-            JOptionPane.showMessageDialog(this,"Open income entry tab to edit");
+//            JOptionPane.showMessageDialog(this,"Open income entry tab to edit");
         } catch (Exception ex) {
            JOptionPane.showMessageDialog(this,ex.getMessage());
         }

@@ -359,7 +359,9 @@ public class createNew extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(this,"Ledger head name cannot be modified");
         }
         showDetails();
-    
+     txtlname.setText("");     
+    txtldetails.setText("");
+    txtll.setText("");
     }//GEN-LAST:event_btnHeadActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -392,6 +394,9 @@ public class createNew extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(this,"Ledger head can not be deleted because it contains entries");
         }
         showDetails();
+         txtlname.setText("");     
+    txtldetails.setText("");
+    txtll.setText("");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked

@@ -4,7 +4,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -35,24 +38,19 @@ Connection x;
         int w=(int)tk.getScreenSize().getWidth();
         int y=(int)tk.getScreenSize().getHeight();
         this.setSize(w,y);
-       
-       
-     
-       
-    
-       
-     
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
+       Calendar c=Calendar.getInstance();
+       int n=c.get(Calendar.DATE);
+       if(n==c.getActualMaximum(Calendar.DAY_OF_MONTH))
+       {
+            try {
+                String subject="Ledger Head Limit Update";
+                String message="Welcome to DayBook, it is the month's end, please update your Ledger Head Limit.";
+                sendMail.sendEmail(email, subject, message);
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+                
+       }
     }
 
 

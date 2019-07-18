@@ -3,9 +3,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Vector;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -97,7 +99,7 @@ public class Fees extends javax.swing.JInternalFrame {
         setBackground(new java.awt.Color(1, 50, 67));
         setClosable(true);
         setIconifiable(true);
-        setMaximizable(true);
+        setResizable(true);
 
         jPanel1.setBackground(new java.awt.Color(240, 52, 52));
 
@@ -237,6 +239,11 @@ public class Fees extends javax.swing.JInternalFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -391,7 +398,11 @@ public class Fees extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(this,ex.getMessage());
         }
      showDetails();
-    
+    txtamt.setText("");
+            Date dd=new Date();
+            
+            datechoose.setDate(dd);
+            jRadioButton2.isSelected();
                                            
 
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -403,6 +414,27 @@ public class Fees extends javax.swing.JInternalFrame {
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel7MouseClicked
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        // TODO add your handling code here:
+        try {
+            // TODO add your handling code here:
+            
+            int row=jTable1.getSelectedRow();
+            TableModel k1=jTable1.getModel();
+            String a1=(String)k1.getValueAt(row, 1);
+           // String a2=(String)k1.getValueAt(row, 2);
+            String a3=(String)k1.getValueAt(row, 3);
+            jTabbedPane1.setSelectedIndex(0);
+            txtamt.setText(a1);
+           jRadioButton1.isSelected();
+            java.util.Date date2=new SimpleDateFormat("dd-mm-yyyy").parse(a3);
+            datechoose.setDate(date2);
+//            JOptionPane.showMessageDialog(this,"Open income entry tab to edit");
+        } catch (Exception ex) {
+           JOptionPane.showMessageDialog(this,ex.getMessage());
+        }
+    }//GEN-LAST:event_jTable1MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

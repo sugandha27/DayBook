@@ -15,6 +15,8 @@ import org.jfree.chart.ChartFrame;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.CategoryPlot;
 import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.chart.renderer.category.BarRenderer;
+import org.jfree.chart.renderer.category.StandardBarPainter;
 import org.jfree.data.category.DefaultCategoryDataset;
 
 /*
@@ -885,6 +887,7 @@ void showYearEx() throws Exception
         jLabel4 = new javax.swing.JLabel();
         txtIncome = new javax.swing.JLabel();
         txtExpense = new javax.swing.JLabel();
+        jButton6 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
@@ -897,6 +900,7 @@ void showYearEx() throws Exception
         Comboy3 = new javax.swing.JComboBox<>();
         txtmonIn = new javax.swing.JLabel();
         txtmonEx = new javax.swing.JLabel();
+        jButton5 = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jScrollPane5 = new javax.swing.JScrollPane();
         jTable5 = new javax.swing.JTable();
@@ -909,6 +913,7 @@ void showYearEx() throws Exception
         Comboy2 = new javax.swing.JComboBox<>();
         txtquatIn = new javax.swing.JLabel();
         txtquatEx = new javax.swing.JLabel();
+        jButton7 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane7 = new javax.swing.JScrollPane();
         jTable7 = new javax.swing.JTable();
@@ -920,6 +925,7 @@ void showYearEx() throws Exception
         Comboy1 = new javax.swing.JComboBox<>();
         txtyrEx = new javax.swing.JLabel();
         txtyrIn = new javax.swing.JLabel();
+        jButton8 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 67, 81));
@@ -994,12 +1000,24 @@ void showYearEx() throws Exception
         txtExpense.setForeground(new java.awt.Color(255, 255, 255));
         txtExpense.setText("\n");
 
+        jButton6.setBackground(new java.awt.Color(231, 76, 60));
+        jButton6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(255, 255, 255));
+        jButton6.setText("bar chart");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(326, 326, 326)
+                .addGap(173, 173, 173)
+                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(date1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1036,12 +1054,14 @@ void showYearEx() throws Exception
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnExp, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(9, 9, 9)
+                        .addGap(2, 2, 2)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
                             .addComponent(date2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(date1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2))))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel2)
+                                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(10, 10, 10)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1117,12 +1137,24 @@ void showYearEx() throws Exception
         txtmonEx.setForeground(new java.awt.Color(255, 255, 255));
         txtmonEx.setText("\n");
 
+        jButton5.setBackground(new java.awt.Color(231, 76, 60));
+        jButton5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(255, 255, 255));
+        jButton5.setText("bar chart");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(383, 383, 383)
+                .addGap(257, 257, 257)
+                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(ComboMon, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(Comboy3, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1153,7 +1185,8 @@ void showYearEx() throws Exception
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ComboMon)
                     .addComponent(Comboy3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnExp1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnExp1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(16, 16, 16)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1228,6 +1261,16 @@ void showYearEx() throws Exception
         txtquatEx.setForeground(new java.awt.Color(255, 255, 255));
         txtquatEx.setText("\n");
 
+        jButton7.setBackground(new java.awt.Color(231, 76, 60));
+        jButton7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton7.setForeground(new java.awt.Color(255, 255, 255));
+        jButton7.setText("bar chart");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
@@ -1235,7 +1278,9 @@ void showYearEx() throws Exception
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(373, 373, 373)
+                        .addGap(233, 233, 233)
+                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
                         .addComponent(comboQua, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(Comboy2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1267,7 +1312,8 @@ void showYearEx() throws Exception
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Comboy2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(comboQua, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnExp2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnExp2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(11, 11, 11)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtquatIn)
@@ -1340,12 +1386,24 @@ void showYearEx() throws Exception
         txtyrIn.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         txtyrIn.setForeground(new java.awt.Color(255, 255, 255));
 
+        jButton8.setBackground(new java.awt.Color(231, 76, 60));
+        jButton8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton8.setForeground(new java.awt.Color(255, 255, 255));
+        jButton8.setText("bar chart");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(449, 449, 449)
+                .addGap(309, 309, 309)
+                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(Comboy1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnExp3)
@@ -1375,7 +1433,8 @@ void showYearEx() throws Exception
                 .addGap(7, 7, 7)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Comboy1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnExp3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnExp3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -1485,8 +1544,272 @@ void showYearEx() throws Exception
             JOptionPane.showMessageDialog(this,ex.getMessage());
         }
     }//GEN-LAST:event_btnExpActionPerformed
-   
 
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+         try {
+            // TODO add your handling code here:
+           
+           
+            SimpleDateFormat d=new SimpleDateFormat("dd-MM-yyyy"); 
+    String d1=d.format(date1.getDate());
+    String d2=d.format(date2.getDate());
+            String q = "select sum(amount) as sum ,headEntry.type,headEntry.entry_id,accountHead.l_name,headEntry.amount,headEntry.details,headEntry.date,str_to_date(headEntry.date,\"%d-%m-%Y\")  from headEntry inner join accountHead on headEntry.username=accountHead.username and headEntry.type=accountHead.type and headEntry.l_code=accountHead.l_code where (accountHead.username=? and str_to_date(headEntry.date,\"%d-%m-%Y\") BETWEEN str_to_date(?,\"%d-%m-%Y\") and str_to_date(?,\"%d-%m-%Y\")) group by date, accountHead.type";
+            PreparedStatement y = x.prepareStatement(q);
+            y.setString(1,username);
+            y.setString(2,d1);
+            y.setString(3,d2);
+          
+          
+     
+            ResultSet rs = y.executeQuery();
+            String a1,a2,a3,a4;
+            Double de,dd;
+                   DefaultCategoryDataset ds=new DefaultCategoryDataset();
+            while (rs.next()) {
+                a1 = rs.getString("date");
+               
+                a3=rs.getString("headEntry.type");
+               
+                if(a3.equals("Income"))
+                {
+                     a2 = rs.getString("sum");
+                      de=Double.parseDouble(a2);
+                 ds.setValue(de,"Income",a1);
+                }
+                else
+                {
+                    a4=rs.getString("sum");
+                    dd=Double.parseDouble(a4);
+                   ds.setValue(dd,"Expense",a1);  
+                }
+                 
+
+            }
+         
+         
+         JFreeChart chart=ChartFactory.createBarChart3D("Statistics", "Date", "Amount", ds,PlotOrientation.VERTICAL,true,true,false);
+//                JFreeChart chart1=ChartFactory.createBarChart3D("Statistics", "Date", "Expense", df,PlotOrientation.VERTICAL,true,true,false);
+                chart.setBackgroundPaint( new Color(0,181,204));
+                chart.getTitle().setPaint(Color.WHITE);
+                CategoryPlot p=chart.getCategoryPlot();
+                p.setRangeGridlinePaint(Color.WHITE);
+                BarRenderer r=(BarRenderer)p.getRenderer();
+             Color c=new Color(0,81,67);
+             r.setSeriesPaint(0, c);
+             ChartFrame f=new ChartFrame("Monthly Income",chart);
+//                ChartFrame f1=new ChartFrame("Monthly Expense",chart1);
+                f.setVisible(true);
+                f.setSize(450,350);
+                        f.setLocationRelativeTo(null);
+         }
+            catch(Exception ex)
+         {
+             ex.printStackTrace();
+         }
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        try {
+           
+            String mon=String.valueOf(ComboMon.getSelectedItem());
+            String yr=String.valueOf(Comboy3.getSelectedItem());
+            String d1="01-"+mon+"-"+yr;
+            String d2="31-"+mon+"-"+yr;
+            String q = "select sum(amount) as sum ,headEntry.type,headEntry.entry_id,accountHead.l_name,headEntry.amount,headEntry.details,headEntry.date,str_to_date(headEntry.date,\"%d-%m-%Y\")  from headEntry inner join accountHead on headEntry.username=accountHead.username and headEntry.type=accountHead.type and headEntry.l_code=accountHead.l_code where (accountHead.username=? and str_to_date(headEntry.date,\"%d-%m-%Y\") BETWEEN str_to_date(?,\"%d-%m-%Y\") and str_to_date(?,\"%d-%m-%Y\")) group by date, accountHead.type";
+            PreparedStatement y = x.prepareStatement(q);
+            y.setString(1,username);
+            y.setString(2,d1);
+            y.setString(3,d2);
+          
+          
+     
+            ResultSet rs = y.executeQuery();
+            String a1,a2,a3,a4;
+            Double de,dd;
+                   DefaultCategoryDataset ds=new DefaultCategoryDataset();
+            while (rs.next()) {
+                a1 = rs.getString("date");
+               
+                a3=rs.getString("headEntry.type");
+               
+                if(a3.equals("Income"))
+                {
+                     a2 = rs.getString("sum");
+                      de=Double.parseDouble(a2);
+                 ds.setValue(de,"Income",a1);
+                }
+                else
+                {
+                    a4=rs.getString("sum");
+                    dd=Double.parseDouble(a4);
+                   ds.setValue(dd,"Expense",a1);  
+                }
+                 
+
+            }
+         
+         
+         JFreeChart chart=ChartFactory.createBarChart3D("Statistics", "Date", "Amount", ds,PlotOrientation.VERTICAL,true,true,false);
+//                JFreeChart chart1=ChartFactory.createBarChart3D("Statistics", "Date", "Expense", df,PlotOrientation.VERTICAL,true,true,false);
+                chart.setBackgroundPaint( new Color(0,181,204));
+                chart.getTitle().setPaint(Color.WHITE);
+                CategoryPlot p=chart.getCategoryPlot();
+                p.setRangeGridlinePaint(Color.WHITE);
+                BarRenderer r=(BarRenderer)p.getRenderer();
+             Color c=new Color(0,81,67);
+             r.setSeriesPaint(0, c);
+             ChartFrame f=new ChartFrame("Monthly Income",chart);
+
+                f.setVisible(true);
+                f.setSize(450,350);
+                        f.setLocationRelativeTo(null);
+         }
+            catch(Exception ex)
+         {
+             ex.printStackTrace();
+         }
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+            try {
+            // TODO add your handling code here:
+              String m="";
+    int mon=comboQua.getSelectedIndex();
+    if(mon==1)
+        m="01";
+    else if(mon==2)
+        m="04";
+    else if(mon==3)
+        m="07";
+    else if(mon==4)
+        m="10";
+    String u=String.valueOf(Integer.parseInt(m)+2);
+    String yr=String.valueOf(Comboy2.getSelectedItem());
+    String d1="01-"+m+"-"+yr;
+    String d2="31-"+u+"-"+yr;
+    
+            String q = "select sum(amount) as sum ,headEntry.type,headEntry.entry_id,accountHead.l_name,headEntry.amount,headEntry.details,headEntry.date,str_to_date(headEntry.date,\"%d-%m-%Y\")  from headEntry inner join accountHead on headEntry.username=accountHead.username and headEntry.type=accountHead.type and headEntry.l_code=accountHead.l_code where (accountHead.username=? and str_to_date(headEntry.date,\"%d-%m-%Y\") BETWEEN str_to_date(?,\"%d-%m-%Y\") and str_to_date(?,\"%d-%m-%Y\")) group by date, accountHead.type";
+            PreparedStatement y = x.prepareStatement(q);
+            y.setString(1,username);
+            y.setString(2,d1);
+            y.setString(3,d2);
+          
+          
+     
+            ResultSet rs = y.executeQuery();
+            String a1,a2,a3,a4;
+            Double de,dd;
+                   DefaultCategoryDataset ds=new DefaultCategoryDataset();
+            while (rs.next()) {
+                a1 = rs.getString("date");
+               
+                a3=rs.getString("headEntry.type");
+               
+                if(a3.equals("Income"))
+                {
+                     a2 = rs.getString("sum");
+                      de=Double.parseDouble(a2);
+                 ds.setValue(de,"Income",a1);
+                }
+                else
+                {
+                    a4=rs.getString("sum");
+                    dd=Double.parseDouble(a4);
+                   ds.setValue(dd,"Expense",a1);  
+                }
+                 
+
+            }
+         
+         
+         JFreeChart chart=ChartFactory.createBarChart3D("Statistics", "Date", "Amount", ds,PlotOrientation.VERTICAL,true,true,false);
+//                JFreeChart chart1=ChartFactory.createBarChart3D("Statistics", "Date", "Expense", df,PlotOrientation.VERTICAL,true,true,false);
+                chart.setBackgroundPaint( new Color(0,181,204));
+                chart.getTitle().setPaint(Color.WHITE);
+                CategoryPlot p=chart.getCategoryPlot();
+                p.setRangeGridlinePaint(Color.WHITE);
+                BarRenderer r=(BarRenderer)p.getRenderer();
+             Color c=new Color(0,81,67);
+             r.setSeriesPaint(0, c);
+             ChartFrame f=new ChartFrame("Monthly Income",chart);
+//                ChartFrame f1=new ChartFrame("Monthly Expense",chart1);
+                f.setVisible(true);
+                f.setSize(450,350);
+                        f.setLocationRelativeTo(null);
+         }
+            catch(Exception ex)
+         {
+             ex.printStackTrace();
+             JOptionPane.showMessageDialog(this,"Please select quarter for the year");
+         }
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+              try {
+            String yr=String.valueOf(Comboy1.getSelectedItem());
+    String d1="01-01-"+yr;
+    String d2="31-12-"+yr;
+    
+            String q = "select sum(amount) as sum ,headEntry.type,headEntry.entry_id,accountHead.l_name,headEntry.amount,headEntry.details,headEntry.date,str_to_date(headEntry.date,\"%d-%m-%Y\")  from headEntry inner join accountHead on headEntry.username=accountHead.username and headEntry.type=accountHead.type and headEntry.l_code=accountHead.l_code where (accountHead.username=? and str_to_date(headEntry.date,\"%d-%m-%Y\") BETWEEN str_to_date(?,\"%d-%m-%Y\") and str_to_date(?,\"%d-%m-%Y\")) group by date, accountHead.type";
+            PreparedStatement y = x.prepareStatement(q);
+            y.setString(1,username);
+            y.setString(2,d1);
+            y.setString(3,d2);
+          
+          
+     
+            ResultSet rs = y.executeQuery();
+            String a1,a2,a3,a4;
+            Double de,dd;
+                   DefaultCategoryDataset ds=new DefaultCategoryDataset();
+            while (rs.next()) {
+                a1 = rs.getString("date");
+               
+                a3=rs.getString("headEntry.type");
+               
+                if(a3.equals("Income"))
+                {
+                     a2 = rs.getString("sum");
+                      de=Double.parseDouble(a2);
+                 ds.setValue(de,"Income",a1);
+                }
+                else
+                {
+                    a4=rs.getString("sum");
+                    dd=Double.parseDouble(a4);
+                   ds.setValue(dd,"Expense",a1);  
+                }
+                 
+
+            }
+         
+         
+         JFreeChart chart=ChartFactory.createBarChart3D("Statistics", "Date", "Amount", ds,PlotOrientation.VERTICAL,true,true,false);
+//                JFreeChart chart1=ChartFactory.createBarChart3D("Statistics", "Date", "Expense", df,PlotOrientation.VERTICAL,true,true,false);
+                chart.setBackgroundPaint( new Color(0,181,204));
+                chart.getTitle().setPaint(Color.WHITE);
+                CategoryPlot p=chart.getCategoryPlot();
+                p.setRangeGridlinePaint(Color.WHITE);
+                BarRenderer r=(BarRenderer)p.getRenderer();
+             Color c=new Color(0,81,67);
+             r.setSeriesPaint(0, c);
+             ChartFrame f=new ChartFrame("Monthly Income",chart);
+//                ChartFrame f1=new ChartFrame("Monthly Expense",chart1);
+                f.setVisible(true);
+                f.setSize(450,350);
+                        f.setLocationRelativeTo(null);
+         }
+            catch(Exception ex)
+         {
+             ex.printStackTrace();
+         }
+    }//GEN-LAST:event_jButton8ActionPerformed
+   
+                
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> ComboMon;
@@ -1500,6 +1823,10 @@ void showYearEx() throws Exception
     private javax.swing.JComboBox<String> comboQua;
     private com.toedter.calendar.JDateChooser date1;
     private com.toedter.calendar.JDateChooser date2;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
